@@ -38,8 +38,8 @@ async def catch_youtube_dldata(_, q):
         os.makedirs(userdir)
     
     logger.info(f"Downloading...!")
-    await q.edit_message_caption("Downloading...!")
-    # await q.edit_message_reply_markup([[InlineKeyboardButton("Processing..")]])
+    await q.edit_message_caption("𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴...!")
+    # await q.edit_message_reply_markup([[InlineKeyboardButton("𝗽𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴..")]])
 
     fetch_media, caption = await yt_download(
         video_id, media_type, av_codec, format_id, userdir
@@ -59,7 +59,7 @@ async def catch_youtube_dldata(_, q):
 
     if not os.path.exists(file_name):
         await asyncio.gather(q.message.reply_text("Failed"), q.message.delete())
-        logger.info("Media not found")
+        logger.info("𝗠𝗲𝗱𝗶𝗮 𝗻𝗼𝘁 𝗳𝗼𝘂𝗻𝗱")
         return
     
     qt = qr.text
@@ -73,7 +73,7 @@ async def catch_youtube_dldata(_, q):
     else:
         cfname = file_name    
 
-    await q.edit_message_caption(f"download finished .")
+    await q.edit_message_caption(f"𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 ✅.")
     
     #time.sleep(3)
     mt = mimetypes.guess_type(str(cfname))[0]
@@ -106,9 +106,9 @@ async def catch_youtube_dldata(_, q):
         filename = filename.replace(' ','_')
         logger.info(f"Large File. Size: {size} ! --- Spliting")
         await q.edit_message_caption(
-            "Telegram does not support uploading this file.\n"
-            f"Detected File Size: {size} 😡\n"
-            "\n🤖 trying to split the files 🌝🌝🌚"
+            "𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗱𝗼𝗲𝘀 𝗻𝗼𝘁 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝗳𝗶𝗹𝗲 𝘀𝗶𝘇𝗲 𝗹𝗮𝗿𝗴𝗲𝗿 𝘁𝗵𝗮𝗻 2𝗚𝗕.\n"
+            f"𝗗𝗲𝘁𝗲𝗰𝘁𝗲𝗱 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲: {size}\n"
+            "\n🧿 𝗦𝗽𝗹𝗶𝘁𝘁𝗶𝗻𝗴 𝗙𝗶𝗹𝗲𝘀"
         )
         splitted_dir = await split_large_files(cfname)
         totlaa_sleif = os.listdir(splitted_dir)
