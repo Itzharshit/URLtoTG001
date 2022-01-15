@@ -44,7 +44,7 @@ async def ytdl(_, message, msg, url):
 
     if Config.CUSTOM_THUMB:
         await asyncio.sleep(Config.EDIT_TIME)
-        await msg.edit_text("Found Custom thumbnail, Gotta pull it now.")
+        await msg.edit_text("𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐒𝐚𝐯𝐞𝐝.")
         thumbnail_url = Config.CUSTOM_THUMB
     thumbnail = await fetch_thumb(user_id, thumbnail_url, video_id)
     try:
