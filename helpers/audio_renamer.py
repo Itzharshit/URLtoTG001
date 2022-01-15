@@ -21,12 +21,12 @@ async def rna2(bot , u):
   file_path = None
   
   if not u.reply_to_message:
-    await u.reply_text(text=f"Please Reply To Your Audio !\n\nExample:\n**/rna | filename**\n\nsee /help.", quote=True)
+    await u.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐚𝐮𝐝𝐢𝐨 !\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n**/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞**\n\n𝐬𝐞𝐞 /help.", quote=True)
     return
   
   logger.info(f"status: {status}")
   if status:
-    await u.reply_text(text=f"wait until last process finish. then try again.", quote=True)
+    await u.reply_text(text=f"𝐖𝐚𝐢𝐭 𝐮𝐧𝐭𝐢𝐥𝐥 𝐥𝐚𝐬𝐭 𝐩𝐫𝐨𝐜𝐞𝐬𝐬 𝐭𝐨 𝐟𝐢𝐧𝐢𝐬𝐡. 𝐭𝐡𝐞𝐧 𝐭𝐫𝐲 𝐚𝐠𝐚𝐢𝐧.", quote=True)
     return
 
   m = u.reply_to_message
@@ -35,7 +35,7 @@ async def rna2(bot , u):
     ft = m.document or m.audio
     fsize = get_size(ft.file_size)
   else:
-    await m.reply_text(text=f"Please Reply To Audio Files !\n\nSee /help", quote=True)
+    await m.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐚𝐮𝐝𝐢𝐨 !\n\n𝐬𝐞𝐞 /help", quote=True)
     logger.info(f"No Audio File !")
     return
   
@@ -46,7 +46,7 @@ async def rna2(bot , u):
   elif (ft.file_name) and (os.path.splitext(ft.file_name)[1] in audio_types):
     pass
   else:
-    await m.reply_text(text=f"Please Reply To Audio Files !\n\nSee /help", quote=True)
+    await m.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐚𝐮𝐝𝐢𝐨 !\n\n𝐒𝐞𝐞 /help", quote=True)
     logger.info(f"No Audio File !")
     return
   
@@ -69,14 +69,14 @@ async def rna2(bot , u):
   #########################
   args = u.text.split("|")
   if len(args) <= 1:
-    await m.reply_text(text=f"are you kidding me ?\n\nExample:\n`/rna | filename`\n\nsee /hlep.", quote=True)
+    await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥 ?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /hlep.", quote=True)
     return
   #########################
   if len(args) == 2:
     cmd, newname = u.text.split("|", 1)
     newname = newname.strip()
     if newname == "-":
-      await m.reply_text(text=f"are you kidding me ?\n\nExample:\n`/rna | filename`\n\nsee /hlep.", quote=True)
+      await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥 ?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /hlep.", quote=True)
       return
                   
     if m.audio and m.audio.title:
