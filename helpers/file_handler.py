@@ -15,10 +15,10 @@ async def progress(current, total, event, start):
         time_to_completion = round((total - current) / speed) * 1000
         estimated_total_time = elapsed_time + time_to_completion
         
-        progress_str = f"""**Downloading : {"%.2f" % (percentage)}%
-File Size:** {get_size(total)}
-**Downloaded:** {get_size(current)}
-**ETA: **{time_formatter(estimated_total_time)}"""
+        progress_str = f"""**𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 : {"%.2f" % (percentage)}%
+𝐅𝐢𝐥𝐞 𝐬𝐢𝐳𝐞:** {get_size(total)}
+**𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝:** {get_size(current)}
+**𝐄𝐓𝐀: **{time_formatter(estimated_total_time)}"""
 
         await event.edit(progress_str)
 
