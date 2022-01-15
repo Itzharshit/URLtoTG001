@@ -138,14 +138,14 @@ async def rna2(bot , u):
         newartist = None
 
   else:
-    await m.reply_text(text=f"Try Again !\n\nExample:\n**/rna | filename**\n**/rna | filename | title(optional) | artists(optional)**", quote=True)
+    await m.reply_text(text=f"𝐓𝐫𝐲 𝐚𝐠𝐚𝐢𝐧 !\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n**/rna | 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞**\n**/rna | 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞 | 𝐭𝐢𝐭𝐥𝐞(𝐨𝐩𝐭𝐢𝐨𝐧𝐚𝐥) | 𝐚𝐫𝐭𝐢𝐬𝐭𝐬(𝐨𝐩𝐭𝐢𝐨𝐧𝐚𝐥)**", quote=True)
     return
 
   if os.path.splitext(newname)[1]:
     if os.path.splitext(newname)[1] in audio_types:
       pass
     else:
-      await m.reply_text(text=f"use audio extension for new name !\n\nExample:\n**/rna | filename**\n**/rna | filename | title(optional) | artists(optional)**", quote=True)
+      await m.reply_text(text=f"𝐔𝐬𝐞 𝐚𝐮𝐝𝐢𝐨 𝐞𝐱𝐭𝐞𝐧𝐬𝐢𝐨𝐧 𝐟𝐨𝐫 𝐧𝐞𝐰 𝐧𝐚𝐦𝐞 !\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n**/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞**\n**/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞 | 𝐭𝐢𝐭𝐥𝐞(𝐨𝐩𝐭𝐢𝐨𝐧𝐚𝐥) | 𝐚𝐫𝐭𝐢𝐬𝐭𝐬(𝐨𝐩𝐭𝐢𝐨𝐧𝐚𝐥)**", quote=True)
       fsw = "app"
       return
   else:
@@ -157,7 +157,7 @@ async def rna2(bot , u):
   status = True
   logger.info(f"status: {status}")
   
-  msg = await m.reply_text(text=f"⬇️ Trying To Download Audio", quote=True)
+  msg = await m.reply_text(text=f"⬇️ 𝐓𝐫𝐲𝐢𝐧𝐠 𝐭𝐨 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐚𝐮𝐝𝐢𝐨", quote=True)
 
   c_time = time.time()
   file_path = await bot.download_media(
@@ -165,7 +165,7 @@ async def rna2(bot , u):
     file_name=oldname,
     progress=progress_for_pyrogram,
     progress_args=(
-      "⬇️ Downloading Audio:",
+      "⬇️ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐮𝐝𝐢𝐨:",
       msg,
       c_time
     )
@@ -173,7 +173,7 @@ async def rna2(bot , u):
   logger.info(f"file_path: {file_path}")
   if not file_path:
     status = False
-    await msg.edit(f"❌ Downloading Audio Failed !")
+    await msg.edit(f"❌ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐟𝐚𝐢𝐥𝐞𝐝!")
     logger.info(f"status: {status}")
     await clean_up(file_path)
     return
@@ -193,7 +193,7 @@ async def rna2(bot , u):
         if not newartist:
           newartist = probe["format"]["tags"]["artist"]
 
-    await msg.edit(f"⬆️ Trying to Upload as Audio ...")
+    await msg.edit(f"⬆️ 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐮𝐝𝐢𝐨 ...")
       
     c_time = time.time()
     try:
@@ -208,7 +208,7 @@ async def rna2(bot , u):
         reply_to_message_id=m.message_id,
         progress=progress_for_pyrogram,
         progress_args=(
-          f"⬆️ Uploading as Audio:",
+          f"⬆️ 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐚𝐮𝐝𝐢𝐨:",
           msg,
           c_time
         )
@@ -220,5 +220,5 @@ async def rna2(bot , u):
     except Exception as e:
       status = False
       logger.info(f"status: {status}")
-      await msg.edit(f"❌ Uploading as Audio Failed **Error:**\n\n{e}")
+      await msg.edit(f"❌ 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐚𝐮𝐝𝐢𝐨 𝐟𝐚𝐢𝐥𝐞𝐝 **𝐄𝐫𝐫𝐨𝐫:**\n\n{e}")
       await clean_up(file_path)
