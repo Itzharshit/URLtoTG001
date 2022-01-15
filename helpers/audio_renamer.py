@@ -95,7 +95,7 @@ async def rna2(bot , u):
                   
     if newname == "-":
       if newtitle == "-":
-        await m.reply_text(text=f"are you kidding me ?\n\nExample:\n`/rna | filename`\n\nsee /hlep.", quote=True)
+        await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /hlep.", quote=True)
         return  
                   
     if newname == "-":
@@ -119,7 +119,7 @@ async def rna2(bot , u):
     if newname == "-":
       if newtitle == "-":
         if newartist == "-":
-          await m.reply_text(text=f"are you kidding me ?\n\nExample:\n`/rna | filename`\n\nsee /hlep.", quote=True)
+          await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /help.", quote=True)
           return
           
     if newname == "-":
