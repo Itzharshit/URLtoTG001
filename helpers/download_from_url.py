@@ -48,9 +48,9 @@ async def download_coroutine(session, url, file_name, event, start, bot):
             return await response.release()
         await event.edit(
             """**Initiating Download**
-**URL:** {}
-**File Name:** {}
-**File Size:** {}""".format(
+**𝐔𝐑𝐋:** {}
+**𝐅𝐢𝐥𝐞 𝐧𝐚𝐦𝐞:** {}
+**𝐅𝐢𝐥𝐞 𝐬𝐢𝐳𝐞:** {}""".format(
                 url,
                 os.path.basename(file_name).replace("%20", " "),
                 get_size(total_length),
@@ -77,9 +77,9 @@ async def download_coroutine(session, url, file_name, event, start, bot):
                         if total_length < downloaded:
                             total_length = downloaded
                         current_message = """<b>Status</b> : {}%
-Filename: {}
-Size: {}
-Downloaded: {}
+𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞: {}
+𝐒𝐢𝐳𝐞: {}
+𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝: {}
 """.format("%.2f" % (percentage), file_name.split("/")[-1], humanbytes(total_length), humanbytes(downloaded))
                         if (
                             current_message != display_message
