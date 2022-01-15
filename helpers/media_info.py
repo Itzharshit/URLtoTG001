@@ -22,29 +22,29 @@ async def cinfo2(bot , m):
       if ft.file_name:
          fn = str(ft.file_name)
       else:
-         fn = "No File Name Detected!"
+         fn = "𝐅𝐢𝐥𝐞 𝐧𝐚𝐦𝐞 𝐧𝐨𝐭 𝐝𝐞𝐭𝐞𝐜𝐭𝐞𝐝!"
       if m.document:
-         #await m.reply_text(text=f"📋 Link Info:\n\nFile: `{cfname}`\nMime-Type: `{mt}`\nSize: `{url_size}`\n\nUse /upload as reply to your link, it will upload your link to telegram.\n\nSee /help.", quote=True)
-         await m.reply_text(text=f"📋 Media Info:\n\nFile: `{fn}`\nMime-Type: {ft.mime_type}\nSize: `{fsize}`\n\nUse /rna to rename and edit audio tags.\n\nSee /help.", quote=True)
+         #await m.reply_text(text=f"📋 𝐋𝐢𝐧𝐤 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: `{cfname}`\nMime-Type: `{mt}`\n𝐒𝐢𝐳𝐞: `{url_size}`\n\n𝐔𝐬𝐞 /upload as reply to your link, it will upload your link to telegram.\n\nSee /help.", quote=True)
+         await m.reply_text(text=f"📋 𝐌𝐞𝐝𝐢𝐚 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: `{fn}`\nMime-Type: {ft.mime_type}\n𝐒𝐢𝐳𝐞: `{fsize}`\n\n𝐔𝐬𝐞 /rna to rename and edit audio tags.\n\nSee /help.", quote=True)
          return
       if m.audio.title:
          tt = str(ft.title)
       else:
-         tt = "No Title Detected!"
+         tt = "𝐓𝐢𝐭𝐥𝐞 𝐧𝐨𝐭 𝐝𝐞𝐭𝐞𝐜𝐭𝐞𝐝!"
       if m.audio.performer:
          pf = str(ft.performer)
       else:
-         pf = "No artist(s) Detected!"
-      await m.reply_text(text=f"📋 Media Info:\n\nFile: `{fn}`\nMime-Type: `{ft.mime_type}`\nTitle: `{tt}`\nArtist: `{pf}`\nSize: `{fsize}`\n\nUse /rna to rename and edit audio tags.\n\nSee /help.", quote=True)
+         pf = "𝐍𝐨 𝐚𝐫𝐭𝐢𝐬𝐭(𝐬) 𝐃𝐞𝐭𝐞𝐜𝐭𝐞𝐝!"
+      await m.reply_text(text=f"📋 𝐌𝐞𝐝𝐢𝐚 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: `{fn}`\nMime-Type: `{ft.mime_type}`\n𝐓𝐢𝐭𝐥𝐞: `{tt}`\n𝐀𝐫𝐭𝐢𝐬𝐭: `{pf}`\nSize: `{fsize}`\n\nUse /rna to rename and edit audio tags.\n\nSee /help.", quote=True)
    elif ft.mime_type and ft.mime_type.startswith("video/"):
       if ft.file_name:
          fn = str(ft.file_name)
       else:
          fn = "No File Name Detected!"
-      await m.reply_text(text=f"📋 Media Info:\n\nFile: `{fn}`\nMime-Type: `{ft.mime_type}`\nSize: `{fsize}`\n\nUse /c2v to convert or /rnv to rename this video.\n\nSee /help.", quote=True)
+      await m.reply_text(text=f"📋 𝐌𝐞𝐝𝐢𝐚 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: `{fn}`\nMime-Type: `{ft.mime_type}`\n𝐒𝐢𝐳𝐞: `{fsize}`\n\n𝐔𝐬𝐞 /c2v to convert or /rnv to rename this video.\n\nSee /help.", quote=True)
    else:
       if ft.file_name:
          fn = str(ft.file_name)
       else:
          fn = "No File Name Detected!"
-      await m.reply_text(text=f"📋 Media Info:\n\nFile: `{fn}`\nMime-Type: `{ft.mime_type}`\nSize: `{fsize}`\n\nUse /rnf to rename this file.\n\nSee /help.", quote=True)
+      await m.reply_text(text=f"📋 𝐌𝐞𝐝𝐢𝐚 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: `{fn}`\nMime-Type: `{ft.mime_type}`\n𝐒𝐢𝐳𝐞: `{fsize}`\n\n𝐔𝐬𝐞 /rnf to rename this file.\n\nSee /help.", quote=True)
