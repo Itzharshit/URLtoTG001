@@ -116,9 +116,9 @@ async def catch_youtube_dldata(_, q):
         number_of_files = len(totlaa_sleif)
         logger.info(totlaa_sleif)
         await q.edit_message_caption(
-            f"Detected File Size: {size} 😡\n"
-            f"<code>{filename}</code> splitted into {number_of_files} files.\n"
-            "Trying to upload to Telegram, now ..."
+            f"Detected File Size: {size} \n"
+            f"<code>{filename}</code> 𝘀𝗽𝗹𝗶𝘁𝘁𝗲𝗱 𝗶𝗻𝘁𝗼 {number_of_files} 𝗙𝗶𝗹𝗲𝘀.\n"
+            "𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝘁𝗼 𝘁𝗲𝗹𝗲𝗴𝗿𝗮𝗺 ..."
         )
         for le_file in totlaa_sleif:
             # recursion
