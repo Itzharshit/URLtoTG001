@@ -20,7 +20,7 @@ async def to_video2(bot , u):
     probe2 = None
     
     if not u.reply_to_message:
-        await u.reply_text(text=f"Reply To Your Video !", quote=True)
+        await u.reply_text(text=f"𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚 𝐯𝐢𝐝𝐞𝐨 𝐟𝐢𝐥𝐞!", quote=True)
         return
     
     logger.info(f"status: {status}")
@@ -34,7 +34,7 @@ async def to_video2(bot , u):
         ft = m.document or m.video
         fsize = get_size(ft.file_size)
     else:
-        await m.reply_text(text=f"Please Reply To Your Video !\n\nExample:\n**/rnv | filename**\n\nsee /help.", quote=True)
+        await m.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚 𝐯𝐢𝐝𝐞𝐨 𝐟𝐢𝐥𝐞!\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n**/rnv | 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞**\n\nsee /help.", quote=True)
         logger.info(f"No Video File !")
         return
     
@@ -78,7 +78,7 @@ async def to_video2(bot , u):
     status = True
     logger.info(f"status: {status}")
             
-    msg = await m.reply_text(text=f"⬇️ Trying To Download Video ...", quote=True)
+    msg = await m.reply_text(text=f"𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠...", quote=True)
     
     c_time = time.time()
     file_path = await bot.download_media(
@@ -86,13 +86,13 @@ async def to_video2(bot , u):
         file_name=oldname,
         progress=progress_for_pyrogram,
         progress_args=(
-            "⬇️ Downloading Video:",
+            "𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠:",
             msg,
             c_time
         )
     )
     
-    await msg.edit(f"🌄 Generating thumbnail ...")
+    await msg.edit(f"🌄 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥...")
 
     """
     probe2 = await execute(f"ffprobe -v quiet -hide_banner -show_format -show_streams -print_format json '{file_path}'")
@@ -101,7 +101,7 @@ async def to_video2(bot , u):
         logger.info(f"status: {status}")
         await clean_up(file_path)
         logger.info(f"Deleted: {file_path}")
-        await msg.edit_text("Some Error Occured while Fetching Details...")
+        await msg.edit_text("𝐀𝐧 𝐞𝐫𝐫𝐨𝐫 𝐨𝐜𝐜𝐮𝐫𝐞𝐝...")
         return
 
     probe = json.loads(probe2[0])
@@ -118,7 +118,7 @@ async def to_video2(bot , u):
     thumbnail, duration, width, height = await thumb_creator(file_path)
 
     fnext = fn + ".mp4"
-    await msg.edit(f"⬆️ Trying to Upload as Video ...")
+    await msg.edit(f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠...")
     
     try:
         c_time = time.time()
@@ -134,7 +134,7 @@ async def to_video2(bot , u):
             reply_to_message_id=m.message_id,
             progress=progress_for_pyrogram,
             progress_args=(
-                "⬆️ Uploading as Video:",
+                "𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠:",
                 msg,
                 c_time
             )
@@ -147,6 +147,6 @@ async def to_video2(bot , u):
     except Exception as e:
         status = False
         logger.info(f"status: {status}")
-        await msg.edit(f"❌ Uploading as Video Failed **Error:**\n\n{e}")
+        await msg.edit(f"❌ 𝐅𝐚𝐢𝐥𝐞𝐝 𝐭𝐨 𝐮𝐩𝐥𝐨𝐚𝐝 **𝐄𝐫𝐫𝐨𝐫:**\n\n{e}")
         await clean_up(file_path)
 
