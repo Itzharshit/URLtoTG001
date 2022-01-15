@@ -35,7 +35,7 @@ def gd_link_dl(url, file_path):
 
 async def leecher2(bot , u):
     if not u.reply_to_message:
-        await u.reply_text(text=f"Reply To Your Direct Link !", quote=True)
+        await u.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚𝐧𝐲 𝐟𝐢𝐥𝐞!", quote=True)
         return
     
     sw = "direct"
@@ -69,16 +69,16 @@ async def leecher2(bot , u):
                         cfname = cfname.strip()
                         cfname = cfname.split("\',", 1)[0]
                     else:
-                        await m.reply_text(text=f"no filetype specified.\n\nSee /help", quote=True)
+                        await m.reply_text(text=f"𝐅𝐢𝐥𝐞 𝐭𝐲𝐩𝐞 𝐧𝐨𝐭 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐞𝐝.\n\n𝐒𝐞𝐞 /help", quote=True)
                         return
                 else:
-                    await m.reply_text(text=f"no filetype specified.\n\nSee /help", quote=True)
+                    await m.reply_text(text=f"𝐅𝐢𝐥𝐞 𝐭𝐲𝐩𝐞 𝐧𝐨𝐭 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐞𝐝.\n\n𝐒𝐞𝐞 /help", quote=True)
                     return
             except RequestException as e:
                 await m.reply_text(text=f"Error:\n\n{e}", quote=True)
                 return
     
-    msg = await m.reply_text(text=f"`Analyzing Your Link ...`", quote=True)
+    msg = await m.reply_text(text=f"`𝐀𝐧𝐚𝐥𝐲𝐳𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐥𝐢𝐧𝐤...`", quote=True)
     
     if ("youtube.com" in url) or ("youtu.be" in url):
         await ytdl(bot, m, msg, url)
@@ -95,11 +95,11 @@ async def leecher2(bot , u):
         print(f"file downloaded to {file_path} .")
     except Exception as e:
         if 'drive.google.com' in url:
-            await msg.edit(f"Google Drive Link Detected !\n\n`Downloading ...`\n\n**Please Wait.**")
+            await msg.edit(f"Google Drive Link Detected !\n\n`𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ...`\n\n**𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭.**")
             sw = "gd"
         else:
             print(e)
-            await msg.edit(f"Download Link is Invalid or not Accessible !\n\n**Error:** {e}")
+            await msg.edit(f"𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐥𝐢𝐧𝐤 !\n\n**𝐄𝐫𝐫𝐨𝐫:** {e}")
             return
     
     if sw == "gd":
@@ -112,16 +112,16 @@ async def leecher2(bot , u):
             url = "https://drive.google.com/u/0/uc?id=" + str(gid) + "&export=download"
             pass
         else:
-            await msg.edit(f"❌ Gdrive Link is Invalid ! \n\n **Error:** {e}")
+            await msg.edit(f"❌ 𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐆𝐨𝐨𝐠𝐥𝐞 𝐝𝐫𝐢𝐯𝐞 𝐥𝐢𝐧𝐤! \n\n **Error:** {e}")
             return
         
         await gd_link_dl(url, file_path)
         if not os.path.exists(file_path):
-            await msg.edit(f"❌ Gdrive Download Error.")
+            await msg.edit(f"❌ 𝐀𝐧 𝐞𝐫𝐫𝐨𝐫 𝐨𝐜𝐜𝐮𝐫𝐞𝐝 𝐰𝐡𝐢𝐥𝐞 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐠𝐨𝐨𝐠𝐥𝐞 𝐝𝐫𝐢𝐯𝐞.")
             await clean_up(file_path)
             return
         
-    await msg.edit(f"✅ **Successfully Downloaded**\n\n{file_path}")
+    await msg.edit(f"✅ **𝐒𝐮𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝**\n\n{file_path}")
     filename = os.path.basename(file_path)
     filename = filename.replace('%40','@')
     filename = filename.replace('%25','_')
@@ -167,9 +167,9 @@ async def leecher2(bot , u):
         # Split Large Files
         logger.info(f"Large File. Size: {size} ! --- Spliting")
         await msg.edit_text(
-            "Telegram does not support uploading this file."
-            f"\nDetected File Size: {size}"
-            "\n trying to split the files."
+            "𝐅𝐢𝐥𝐞 𝐥𝐚𝐫𝐠𝐞𝐫 𝐭𝐡𝐚𝐧 2𝐆𝐁 𝐜𝐚𝐧 𝐧𝐨𝐭 𝐛𝐞 𝐮𝐩𝐥𝐨𝐚𝐝𝐞𝐝."
+            f"\n𝐃𝐞𝐭𝐞𝐜𝐭𝐞𝐝 𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞: {size}"
+            "\n 𝐓𝐫𝐲𝐢𝐧𝐠 𝐭𝐨 𝐬𝐩𝐥𝐢𝐭 𝐭𝐡𝐞 𝐟𝐢𝐥𝐞."
         )
         splitted_dir = await split_large_files(file_path)
         totlaa_sleif = os.listdir(splitted_dir)
