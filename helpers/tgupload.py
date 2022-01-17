@@ -49,7 +49,7 @@ async def upaudio(client, message, msg, file_loc, fname=None):
     
     await msg.edit(f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠...")
     
-    caption = f"**𝐅𝐢𝐥𝐞:** `{fn}`\n**𝐓𝐢𝐭𝐥𝐞:** `{title}`\n**𝐀𝐫𝐭𝐢𝐬𝐭(𝐬):** `{artist}`\n**𝐒𝐢𝐳𝐞:** {size}"
+    caption = f"**𝐅𝐢𝐥𝐞:** {fn}\n**𝐓𝐢𝐭𝐥𝐞:** {title}\n**𝐀𝐫𝐭𝐢𝐬𝐭(𝐬):** {artist}\n**𝐒𝐢𝐳𝐞:** {size}"
     
     c_time = time.time()    
     try:
@@ -65,7 +65,7 @@ async def upaudio(client, message, msg, file_loc, fname=None):
             reply_to_message_id=message.message_id,
             progress=progress_for_pyrogram,
             progress_args=(
-                f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐚𝐮𝐝𝐢𝐨:\n\n`{fn}`",
+                f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐚𝐮𝐝𝐢𝐨:\n\n{fn}",
                 msg,
                 c_time
             )
@@ -125,14 +125,14 @@ async def upvideo(client, message, msg, file_loc, fname=None):
             video=file_loc,
             file_name=fn,
             thumb=str(thumbnail),
-            caption=f"`{fn}` [{size}]",
+            caption=f"{fn} [{size}]",
             width=width,
             height=height,
             duration=duration,
             reply_to_message_id=message.message_id,
             progress=progress_for_pyrogram,
             progress_args=(
-                f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐕𝐢𝐝𝐞𝐨:\n\n`{fn}`",
+                f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐕𝐢𝐝𝐞𝐨:\n\n{fn}",
                 msg,
                 c_time
             )
@@ -165,11 +165,11 @@ async def upfile(client, message, msg, file_loc, fname=None):
             file_name=fn,
             document=file_loc,
             force_document=True,
-            caption=f"`{fn}` [{size}]",
+            caption=f"{fn} [{size}]",
             reply_to_message_id=message.message_id,
             progress=progress_for_pyrogram,
             progress_args=(
-                f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭:\n\n`{fn}`",
+                f"𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚𝐬 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭:\n\n{fn}",
                 msg,
                 c_time
             )
