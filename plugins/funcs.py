@@ -30,7 +30,7 @@ HELP_TXT = """
 
 /upload : reply to your url .
     
-    http://aaa.bbb.ccc/ddd.eee | **fff.ggg**
+    http://google.com |
     or
     http://aaa.bbb.ccc/ddd.eee
 
