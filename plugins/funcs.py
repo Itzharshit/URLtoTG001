@@ -33,26 +33,26 @@ and Rename Audio/Video/Document Files.
 
 /upload : reply to your url .
     
-    `http://aaa.bbb.ccc/ddd.eee` | **fff.ggg**
+    http://aaa.bbb.ccc/ddd.eee | **fff.ggg**
     or
-    `http://aaa.bbb.ccc/ddd.eee`
+    http://aaa.bbb.ccc/ddd.eee
 
 /c2v : reply to your document to convert it into streamable video.
     
 /rnv : reply to your video. Example:
     
-    `/rnv | videoname`
+    /rnv | videoname
     
-/rna : reply to your audio. \"`-`\" : leave without change.
+/rna : reply to your audio. \"-\" : leave without change.
 
-    `/rna | audioname | title | artists`
-    `/rna | audioname`
-    `/rna | - | title`
-    `/rna | - | - | artists`
+    /rna | audioname | title | artists
+    /rna | audioname
+    /rna | - | title
+    /rna | - | - | artists
     
 /rnf : reply to your document. Example:
 
-    `/rnf | filename.ext`
+    /rnf | filename.ext
 """
 
 @Client.on_message(filters.command(["start"]))
