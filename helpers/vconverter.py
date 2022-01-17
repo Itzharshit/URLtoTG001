@@ -130,7 +130,7 @@ async def to_video2(bot , u):
             height=height,
             duration=duration,
             thumb=str(thumbnail),
-            caption=f"`{fnext}` [{fsize}]",
+            caption=f"{fnext} [{fsize}]",
             reply_to_message_id=m.message_id,
             progress=progress_for_pyrogram,
             progress_args=(
