@@ -74,7 +74,7 @@ async def rnv2(bot , u):
     #########################
     args = u.text.split("|")
     if (len(args) <= 1) or (len(args) > 2):
-        await m.reply_text(text=f"𝐖𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\nExample:\n`/rnv | filename`\n\nsee /hlep.", quote=True)
+        await m.reply_text(text=f"𝐖𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\nExample:\n/rnv | filename\n\nsee /hlep.", quote=True)
         return
     #########################
     
@@ -138,7 +138,7 @@ async def rnv2(bot , u):
                 height=height,
                 duration=duration,
                 thumb=str(thumbnail),
-                caption=f"`{newname}` [{fsize}]",
+                caption=f"{newname} [{fsize}]",
                 reply_to_message_id=m.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
