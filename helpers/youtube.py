@@ -26,7 +26,7 @@ async def ytdl(_, message, msg, url):
         wait_time = round(
             (userLastDownloadTime - datetime.now()).total_seconds() / 60, 2
         )
-        await msg.edit(f"Wait {wait_time} Minutes before next Request")
+        await msg.edit(f"𝐖𝐚𝐢𝐭 {wait_time} 𝐌𝐢𝐧𝐮𝐭𝐞𝐬 ⏳ 𝐛𝐞𝐟𝐨𝐫𝐞 𝐧𝐞𝐱𝐭 𝐫𝐞𝐪𝐮𝐞𝐬𝐭.")
         return
     
     try:
