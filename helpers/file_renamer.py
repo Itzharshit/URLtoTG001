@@ -103,7 +103,7 @@ async def rnf2(bot , u):
             file_name=newname,
             document=file_path,
             force_document=True,
-            caption=f"`{newname}` [{fsize}]",
+            caption=f"{newname} [{fsize}]",
             reply_to_message_id=m.message_id,
             progress=progress_for_pyrogram,
             progress_args=(
@@ -122,5 +122,5 @@ async def rnf2(bot , u):
           logger.info(f"status: {status}")
           await clean_up(file_path)
     else:
-      await m.reply_text(text=f"𝗪𝗵𝗮𝘁 𝘁𝗵𝗲 𝗵𝗲𝗹𝗹?\n\n𝗘𝘅𝗮𝗺𝗽𝗹𝗲:\n`/rnf | filename.ext`\n\n𝘀𝗲𝗲 /hlep.", quote=True)
+      await m.reply_text(text=f"𝗪𝗵𝗮𝘁 𝘁𝗵𝗲 𝗵𝗲𝗹𝗹?\n\n𝗘𝘅𝗮𝗺𝗽𝗹𝗲:\n/rnf | filename.ext\n\n𝘀𝗲𝗲 /hlep.", quote=True)
       return
