@@ -69,14 +69,14 @@ async def rna2(bot , u):
   #########################
   args = u.text.split("|")
   if len(args) <= 1:
-    await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥 ?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /hlep.", quote=True)
+    await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥 ?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞\n\n𝐬𝐞𝐞 /hlep.", quote=True)
     return
   #########################
   if len(args) == 2:
     cmd, newname = u.text.split("|", 1)
     newname = newname.strip()
     if newname == "-":
-      await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥 ?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /hlep.", quote=True)
+      await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥 ?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞\n\n𝐬𝐞𝐞 /hlep.", quote=True)
       return
                   
     if m.audio and m.audio.title:
@@ -95,7 +95,7 @@ async def rna2(bot , u):
                   
     if newname == "-":
       if newtitle == "-":
-        await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /hlep.", quote=True)
+        await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞\n\n𝐬𝐞𝐞 /hlep.", quote=True)
         return  
                   
     if newname == "-":
@@ -119,7 +119,7 @@ async def rna2(bot , u):
     if newname == "-":
       if newtitle == "-":
         if newartist == "-":
-          await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n`/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞`\n\n𝐬𝐞𝐞 /help.", quote=True)
+          await m.reply_text(text=f"𝐰𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n/rna | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞\n\n𝐬𝐞𝐞 /help.", quote=True)
           return
           
     if newname == "-":
@@ -204,7 +204,7 @@ async def rna2(bot , u):
         title=newtitle,
         duration=duration,
         audio=file_path,
-        caption=f"**File:** `{newname}`\n**Title:** `{newtitle}`\n**Artist(s):** `{newartist}`\n**Size:** {fsize}",
+        caption=f"**File:** {newname}\n**Title:** {newtitle}\n**Artist(s):** {newartist}\n**Size:** {fsize}",
         reply_to_message_id=m.message_id,
         progress=progress_for_pyrogram,
         progress_args=(
