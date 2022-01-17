@@ -26,10 +26,7 @@ from helpers.link_info import linfo2
 logger = logging.getLogger(__name__)
 
 HELP_TXT = """
-A Simple Telegram Bot to 
-Upload Files From **Direct** and **Google Drive** and **Youtube** Links,
-Convert Document Media to Video,
-and Rename Audio/Video/Document Files.
+𝗬𝗼𝘂 𝗰𝗮𝗻 𝘂𝘀𝗲 𝘁𝗵𝗲𝘀𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁.
 
 /upload : reply to your url .
     
