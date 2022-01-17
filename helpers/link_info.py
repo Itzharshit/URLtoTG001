@@ -28,7 +28,7 @@ async def linfo2(bot , m):
         fn = fn.split("\',", 1)[0]
     #logger.info(r.text)
     logger.info(fn)
-    await m.reply_text(text=f"📋 𝐋𝐢𝐧𝐤 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: `{fn}`\n\n𝐔𝐬𝐞 /upload.\n\n𝐒𝐞𝐞 /help.", quote=True)
+    await m.reply_text(text=f"📋 𝐋𝐢𝐧𝐤 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: {fn}\n\n𝐔𝐬𝐞 /upload.\n\n𝐒𝐞𝐞 /help.", quote=True)
     return
   else:
     url = m.text.strip()
@@ -55,4 +55,4 @@ async def linfo2(bot , m):
   url_size = int(r.headers.get("content-length", 0))
   url_size = get_size(url_size)
 
-  await m.reply_text(text=f"📋 𝐋𝐢𝐧𝐤 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: `{cfname}`\nMime-Type: `{mt}`\n𝐒𝐢𝐳𝐞: `{url_size}`\n\n𝐔𝐬𝐞 /upload 𝐚𝐬 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐥𝐢𝐧𝐤, 𝐢𝐭 𝐰𝐢𝐥𝐥 𝐮𝐩𝐥𝐨𝐚𝐝 𝐲𝐨𝐮𝐫 𝐥𝐢𝐧𝐤 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦.\n\n𝐒𝐞𝐞 /help.", quote=True)
+  await m.reply_text(text=f"📋 𝐋𝐢𝐧𝐤 𝐢𝐧𝐟𝐨:\n\n𝐅𝐢𝐥𝐞: {cfname}\nMime-Type: {mt}\n𝐒𝐢𝐳𝐞: {url_size}\n\n𝐔𝐬𝐞 /upload 𝐚𝐬 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐥𝐢𝐧𝐤, 𝐢𝐭 𝐰𝐢𝐥𝐥 𝐮𝐩𝐥𝐨𝐚𝐝 𝐲𝐨𝐮𝐫 𝐥𝐢𝐧𝐤 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦.\n\n𝐒𝐞𝐞 /help.", quote=True)
