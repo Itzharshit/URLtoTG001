@@ -78,7 +78,7 @@ async def leecher2(bot , u):
                 await m.reply_text(text=f"Error:\n\n{e}", quote=True)
                 return
     
-    msg = await m.reply_text(text=f"`𝐀𝐧𝐚𝐥𝐲𝐳𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐥𝐢𝐧𝐤...`", quote=True)
+    msg = await m.reply_text(text=f"𝐀𝐧𝐚𝐥𝐲𝐳𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐥𝐢𝐧𝐤...", quote=True)
     
     if ("youtube.com" in url) or ("youtu.be" in url):
         await ytdl(bot, m, msg, url)
@@ -95,7 +95,7 @@ async def leecher2(bot , u):
         print(f"file downloaded to {file_path} .")
     except Exception as e:
         if 'drive.google.com' in url:
-            await msg.edit(f"Google Drive Link Detected !\n\n`𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ...`\n\n**𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭.**")
+            await msg.edit(f"Google Drive Link Detected !\n\n𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ...\n\n**𝐏𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭.**")
             sw = "gd"
         else:
             print(e)
@@ -177,7 +177,7 @@ async def leecher2(bot , u):
         number_of_files = len(totlaa_sleif)
         logger.info(totlaa_sleif)
         await msg.edit_text(
-            f"`{filename}` splitted into **{number_of_files}** files.\n"
+            f"{filename} splitted into **{number_of_files}** files.\n"
         )
         for le_file in totlaa_sleif:
             # recursion
