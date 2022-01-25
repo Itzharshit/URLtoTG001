@@ -25,7 +25,7 @@ async def to_video2(bot , u):
     
     logger.info(f"status: {status}")
     if status:
-        await u.reply_text(text=f"wait until last process finish. then try again.", quote=True)
+        await u.reply_text(text=f"𝐖𝐚𝐢𝐭 𝐮𝐧𝐭𝐢𝐥 𝐨𝐧𝐞 𝐩𝐫𝐨𝐜𝐞𝐬𝐬 𝐟𝐢𝐧𝐢𝐬𝐡.", quote=True)
         return
     
     m = u.reply_to_message
@@ -50,7 +50,7 @@ async def to_video2(bot , u):
     elif (ft.file_name) and (os.path.splitext(ft.file_name)[1] in video_types):
         pass
     else:
-        await m.reply_text(text=f"Please Reply To Your Video !\n\nExample:\n**/rnv | filename**\n\nsee /help.", quote=True)
+        await m.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐯𝐢𝐝𝐞𝐨 !\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n**/rnv | 𝐟𝐢𝐥𝐞𝐧𝐚𝐦𝐞**\n\n𝐬𝐞𝐞 /help.", quote=True)
         logger.info(f"No Video File !")
         return
     
