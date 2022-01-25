@@ -29,16 +29,17 @@ HELP_TXT = """
 𝗨𝘀𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁 𝗶𝘀 𝘀𝘁𝗿𝗮𝗶𝗴𝗵𝘁 𝗳𝗼𝗿𝘄𝗮𝗿𝗱, 𝗷𝘂𝘀𝘁 𝗰𝗵𝗲𝗰𝗸 𝗯𝗼𝘁 𝗺𝗲𝗻𝘂 𝘁𝗼 𝗴𝗲𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀.
 """
 
-@Client.on_message(filters.command(["start"]))
-async def start(client , m):
-    """Send a message when the command /start is issued."""
-    await m.reply_text(text=f"𝗛𝗶𝗶,\n 𝗜 𝗮𝗺 𝗽𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗨𝗥𝗟 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗿 𝗯𝗼𝘁 𝗰𝗿𝗲𝗮𝘁𝗲𝗱 𝗯𝘆 @Pyrogrammers 𝗰𝗵𝗲𝗰𝗸 𝗯𝗼𝘁 𝗺𝗲𝗻𝘂 𝘁𝗼 𝗴𝗲𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀!"
-reply_markup=InlineKeyboardMarkup([
+@Client.on_message(filters.command("start") & filters.private)
+async def start(_, message):
+   user = message.from_user.mention
+   return await message.reply_text(f"""𝗛𝗶𝗶 {user},𝗜 𝗮𝗺 𝗠𝗲𝗴𝗮 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗕𝗼𝘁.
+𝗣𝗹𝗲𝗮𝘀𝗲 𝘀𝗲𝗻𝗱 𝗺𝗲 𝗮𝗻𝘆 𝗺𝗲𝗴𝗮.𝗻𝘇 𝗹𝗶𝗻𝗸 𝗜 𝘄𝗶𝗹𝗹 𝗴𝗶𝘃𝗲 𝘆𝗼𝘂 𝗳𝗶𝗹𝗲.""",
+    reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥", url="https://t.me/+7ScFy39Vckk5MWQ1"),
                      InlineKeyboardButton("𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝘾𝙝𝙖𝙣𝙣𝙚𝙡", url="https://t.me/pyrogrammers")],
                     [InlineKeyboardButton("𝙔𝙤𝙪𝙏𝙪𝙗𝙚 𝘾𝙝𝙖𝙣𝙣𝙚𝙡", url="https://youtube.com/channel/UC2anvk7MNeNzJ6B4c0SZepw")]
                 ])
-
+            )
     
 @Client.on_message(filters.command(["help"]))
 async def help(client , m):
