@@ -32,7 +32,7 @@ HELP_TXT = """
 @Client.on_message(filters.command(["start"]))
 async def start(client , m):
     """Send a message when the command /start is issued."""
-    await m.reply_text(text=f"𝗛𝗶𝗶,\n 𝗜 𝗮𝗺 𝗽𝗼𝘄𝗲𝗿𝗳𝘂𝗹𝗹 𝗨𝗥𝗟 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗿 𝗯𝗼𝘁 𝗰𝗿𝗲𝗮𝘁𝗲𝗱 𝗯𝘆 @Pyrogrammers 𝗰𝗵𝗲𝗰𝗸 𝗯𝗼𝘁 𝗺𝗲𝗻𝘂 𝘁𝗼 𝗴𝗲𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀!")
+    await m.reply_text(text=f"𝗛𝗶𝗶,\n 𝗜 𝗮𝗺 𝗽𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗨𝗥𝗟 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗿 𝗯𝗼𝘁 𝗰𝗿𝗲𝗮𝘁𝗲𝗱 𝗯𝘆 @Pyrogrammers 𝗰𝗵𝗲𝗰𝗸 𝗯𝗼𝘁 𝗺𝗲𝗻𝘂 𝘁𝗼 𝗴𝗲𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀!")
 
     
 @Client.on_message(filters.command(["help"]))
