@@ -47,7 +47,7 @@ async def download_coroutine(session, url, file_name, event, start, bot):
         if "text" in content_type and total_length < 500:
             return await response.release()
         await event.edit(
-            """**Initiating Download**
+            """**𝐈𝐧𝐭𝐢𝐚𝐭𝐢𝐧𝐠 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝**
 **𝐔𝐑𝐋:** {}
 **𝐅𝐢𝐥𝐞 𝐧𝐚𝐦𝐞:** {}
 **𝐅𝐢𝐥𝐞 𝐬𝐢𝐳𝐞:** {}""".format(
@@ -76,7 +76,7 @@ async def download_coroutine(session, url, file_name, event, start, bot):
                     try:
                         if total_length < downloaded:
                             total_length = downloaded
-                        current_message = """<b>Status</b> : {}%
+                        current_message = """<b>𝐒𝐭𝐚𝐭𝐮𝐬</b> : {}%
 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞: {}
 𝐒𝐢𝐳𝐞: {}
 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝: {}
