@@ -26,36 +26,13 @@ from helpers.link_info import linfo2
 logger = logging.getLogger(__name__)
 
 HELP_TXT = """
-𝗬𝗼𝘂 𝗰𝗮𝗻 𝘂𝘀𝗲 𝘁𝗵𝗲𝘀𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁.
-
-/upload : reply to your url .
-    
-    http://google.com |
-    or
-    http://aaa.bbb.ccc/ddd.eee
-
-/c2v : reply to your document to convert it into streamable video.
-    
-/rnv : reply to your video. Example:
-    
-    /rnv | videoname
-    
-/rna : reply to your audio. \"-\" : leave without change.
-
-    /rna | audioname | title | artists
-    /rna | audioname
-    /rna | - | title
-    /rna | - | - | artists
-    
-/rnf : reply to your document. Example:
-
-    /rnf | filename.ext
+𝗨𝘀𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁 𝗶𝘀 𝘀𝘁𝗿𝗮𝗶𝗴𝗵𝘁 𝗳𝗼𝗿𝘄𝗮𝗿𝗱, 𝗷𝘂𝘀𝘁 𝗰𝗵𝗲𝗰𝗸 𝗯𝗼𝘁 𝗺𝗲𝗻𝘂 𝘁𝗼 𝗴𝗲𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀.
 """
 
 @Client.on_message(filters.command(["start"]))
 async def start(client , m):
     """Send a message when the command /start is issued."""
-    await m.reply_text(text=f"Hi\n\nSee /help for More Info!")
+    await m.reply_text(text=f"𝗛𝗶𝗶,\n 𝗜 𝗮𝗺 𝗽𝗼𝘄𝗲𝗿𝗳𝘂𝗹𝗹 𝗨𝗥𝗟 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗿 𝗯𝗼𝘁 𝗰𝗿𝗲𝗮𝘁𝗲𝗱 𝗯𝘆 @Pyrogrammers 𝗰𝗵𝗲𝗰𝗸 𝗯𝗼𝘁 𝗺𝗲𝗻𝘂 𝘁𝗼 𝗴𝗲𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀!")
 
     
 @Client.on_message(filters.command(["help"]))
