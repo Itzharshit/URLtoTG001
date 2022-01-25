@@ -74,7 +74,7 @@ async def rnv2(bot , u):
     #########################
     args = u.text.split("|")
     if (len(args) <= 1) or (len(args) > 2):
-        await m.reply_text(text=f"𝐖𝐡𝐚𝐭 𝐭𝐡𝐞 𝐡𝐞𝐥𝐥?\n\nExample:\n/rnv | filename\n\nsee /hlep.", quote=True)
+        await m.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐟𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐢𝐧𝐬𝐭𝐫𝐮𝐜𝐭𝐢𝐨𝐧𝐬?\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n/rnv | 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞\n\n𝐬𝐞𝐞 /help.", quote=True)
         return
     #########################
     
@@ -85,7 +85,7 @@ async def rnv2(bot , u):
         if os.path.splitext(newname)[1] in video_types:
             pass
         else:
-            await m.reply_text(text=f"𝐔𝐬𝐞 𝐯𝐢𝐝𝐞𝐨 𝐞𝐱𝐭𝐞𝐧𝐬𝐢𝐨𝐧 𝐢𝐧 𝐟𝐢𝐥𝐞 𝐧𝐚𝐦𝐞!\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:**/rnv | 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞**\n\nsee /help.", quote=True)
+            await m.reply_text(text=f"𝐔𝐬𝐞 𝐯𝐢𝐝𝐞𝐨 𝐞𝐱𝐭𝐞𝐧𝐬𝐢𝐨𝐧 𝐢𝐧 𝐟𝐢𝐥𝐞 𝐧𝐚𝐦𝐞!\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:**/rnv | 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞**\n\n𝐬𝐞𝐞 /help.", quote=True)
             fsw = "app"
             return
     else:
