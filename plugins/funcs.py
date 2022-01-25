@@ -26,14 +26,24 @@ from helpers.link_info import linfo2
 logger = logging.getLogger(__name__)
 
 HELP_TXT = """
-𝗨𝘀𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁 𝗶𝘀 𝘀𝘁𝗿𝗮𝗶𝗴𝗵𝘁 𝗳𝗼𝗿𝘄𝗮𝗿𝗱, 𝗷𝘂𝘀𝘁 𝗰𝗵𝗲𝗰𝗸 𝗯𝗼𝘁 𝗺𝗲𝗻𝘂 𝘁𝗼 𝗴𝗲𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀.
+/upload : reply to your url to upload your link to telegram.
+/c2v : reply to your document to convert it into video.
+/rnv : reply to your video to rename.
+Eg:- /rnv | videoname.ext
+
+/rna : reply to your audio to edit audio tag. \"-\" : leave without change.
+/rna | audioname | title | artists
+/rna | audioname
+/rna | - | title
+/rna | - | - | artists
+/rnf : reply to your document to rename. Eg:- /rnf | filename.ext
 """
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(_, message):
    user = message.from_user.mention
-   return await message.reply_text(f"""𝗛𝗶𝗶 {user},𝗜 𝗮𝗺 𝗠𝗲𝗴𝗮 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗕𝗼𝘁.
-𝗣𝗹𝗲𝗮𝘀𝗲 𝘀𝗲𝗻𝗱 𝗺𝗲 𝗮𝗻𝘆 𝗺𝗲𝗴𝗮.𝗻𝘇 𝗹𝗶𝗻𝗸 𝗜 𝘄𝗶𝗹𝗹 𝗴𝗶𝘃𝗲 𝘆𝗼𝘂 𝗳𝗶𝗹𝗲.""",
+   return await message.reply_text(f"""𝗛𝗶𝗶 {user},\n𝗜 𝗮𝗺 𝗨𝗥𝗟 𝘂𝗽𝗹𝗼𝗮𝗱𝗲𝗿 𝗕𝗼𝘁.
+𝗜 𝗰𝗮𝗻 𝗱𝗼 𝗮 𝗹𝗼𝘁 𝗼𝗳 𝘁𝗵𝗶𝗻𝗴𝘀 𝗶𝗻𝗰𝗹𝘂𝗱𝗶𝗻𝗴 𝘂𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝗨𝗥𝗟.""",
     reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥", url="https://t.me/+7ScFy39Vckk5MWQ1"),
                      InlineKeyboardButton("𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝘾𝙝𝙖𝙣𝙣𝙚𝙡", url="https://t.me/pyrogrammers")],
