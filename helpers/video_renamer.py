@@ -51,7 +51,7 @@ async def rnv2(bot , u):
     elif (ft.file_name) and (os.path.splitext(ft.file_name)[1] in video_types):
         pass
     else:
-        await m.reply_text(text=f"Please Reply To Your Video !\n\nExample:\n**/rnv | filename**\n\nsee /help.", quote=True)
+        await m.reply_text(text=f"𝐏𝐥𝐞𝐚𝐬𝐞 𝐟𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐢𝐧𝐬𝐭𝐫𝐮𝐜𝐭𝐢𝐨𝐧𝐬\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞:\n/rnv | 𝐅𝐢𝐥𝐞𝐧𝐚𝐦𝐞\n\n𝐬𝐞𝐞 /help.", quote=True)
         logger.info(f"No Video File !")
         return
     
