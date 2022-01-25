@@ -24,11 +24,11 @@ async def progress_func(
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
         PRGRS[f"{message.chat.id}_{message.message_id}"] = {
-            "current": humanbytes(current),
-            "total": humanbytes(total),
-            "speed": humanbytes(speed),
-            "progress": percentage,
-            "eta": elapsed_time
+            "𝐂𝐮𝐫𝐫𝐞𝐧𝐭": humanbytes(current),
+            "𝐓𝐨𝐭𝐚𝐥": humanbytes(total),
+            "𝐒𝐩𝐞𝐞𝐝": humanbytes(speed),
+            "𝐏𝐫𝐨𝐠𝐫𝐞𝐬𝐬": percentage,
+            "𝐄𝐭𝐚": elapsed_time
         }
 
 
